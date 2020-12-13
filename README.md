@@ -8,7 +8,21 @@ The website is build using the following technologies:
 
 - Hugo: Compiles the project website from Markdown and JSON to HTML.
 - RevealJS: Enables to create presentations using plain HTML.
-- claat: Compiles tutorials using the Google Codelabs tool to HTML. 
+- claat: Compiles tutorials using the Google Codelabs tool to HTML.
+
+## Content authoring
+
+### Add a new presentation
+
+To create a new presentation, copy the presentation template into a new directory.
+
+```
+PRESENTATION_KEY=example
+cp -r presentations/_template presentations/${PRESENTATION_KEY}
+```
+
+Afterwards you can right away see the new presentation locally in your browser.
+Then use the [RevealJS](https://revealjs.com) syntax to add the contents of your presentation to the `index.html` for your presentation.
 
 ## License
 
