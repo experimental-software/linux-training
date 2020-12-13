@@ -2,6 +2,9 @@
 
 This repository contains the code which is used to generate the website for the Linux Training course materials.
 
+- Presentation: Slides and speaker notes for explaining the context for a particular topic.
+- Tutorials: Step-by-step guides to achieve a particular goal.
+
 ## Dependencies
 
 The website is build using the following technologies:
@@ -17,12 +20,22 @@ The website is build using the following technologies:
 To create a new presentation, copy the presentation template into a new directory.
 
 ```
-PRESENTATION_KEY=example
-cp -r presentations/_template presentations/${PRESENTATION_KEY}
+PRESENTATION_FOLDER=example
+cp -r presentations/_template presentations/${PRESENTATION_FOLDER}
 ```
 
 Afterwards you can right away see the new presentation locally in your browser.
 Then use the [RevealJS](https://revealjs.com) syntax to add the contents of your presentation to the `index.html` for your presentation.
+
+
+### Add a new tutorial
+
+Use the [Codelabs Markdown syntax](https://github.com/googlecodelabs/tools/tree/master/claat/parser/md) to add the contents to the `index.md` for your tutorial
+
+## References
+
+- [Publish Technical Tutorials in Google Codelab Format](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd)
+- [Markdown syntax](https://daringfireball.net/projects/markdown/syntax)
 
 ## License
 
