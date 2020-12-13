@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "updated": "2020-12-13T20:35:43+01:00",
+  "id": "terminal-navigation",
+  "duration": 0,
+  "title": "Terminal Navigation",
+  "authors": "JM",
+  "summary": "How to navigate in the terminal",
+  "source": "tutorials/terminal-navigation/index.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "basics"
+  ],
+  "tags": [
+    "bash"
+  ],
+  "feedback": "https://github.com/experimental-software/linux-training/issues",
+  "url": "terminal-navigation"
+}

@@ -32,6 +32,19 @@ Then use the [RevealJS](https://revealjs.com) syntax to add the contents of your
 
 Use the [Codelabs Markdown syntax](https://github.com/googlecodelabs/tools/tree/master/claat/parser/md) to add the contents to the `index.md` for your tutorial
 
+Run the following command to compile a tutorial from Markdown to HTML:
+
+```
+TUTORIAL_FOLDER=terminal-navigation
+claat export -o tutorials/ -ga "" tutorials/${TUTORIAL_FOLDER}/index.md
+```
+
+Like this you can then start a small local webserve to check that the tutorial was rendered like expected:
+
+```
+claat serve
+```
+
 ## References
 
 - [Publish Technical Tutorials in Google Codelab Format](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd)
