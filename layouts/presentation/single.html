@@ -17,9 +17,9 @@
 		<div class="reveal">
 			<div class="slides">
 				
-        {{ range .Resources.Match "*md" }}
+        {{ range .Resources.Match "{*.md,*.html}" }}
           <section>
-            {{ .Content }}
+            {{ htmlUnescape .Content | safeHTML  }}
           </section>
         {{ end }}
 			</div>

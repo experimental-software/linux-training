@@ -1,4 +1,6 @@
 
 # Something
 
-Bla bla bla
+```
+apt install lib1
+```
