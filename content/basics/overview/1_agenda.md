@@ -11,3 +11,6 @@
 * Drittes Thema
 {{% /speaker-note %}}
 
+<!-- {{% vertical-slide %}}
+
+{{% /vertical-slide %}} -->
