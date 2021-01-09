@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="{{ "reveal.js/dist/reveal.css" | relURL }}">
 		<link rel="stylesheet" href="{{ "reveal.js/dist/theme/black.css" | relURL }}" id="theme">
 		
-		<script src="https://cdn.jsdelivr.net/npm/@gitgraph/js"></script>
+		<script src="{{ "gitgraph.js" | relURL }}"></script>
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="{{ "reveal.js/plugin/highlight/monokai.css" | relURL }}" id="highlight-theme">
@@ -20,9 +20,7 @@
 			<div class="slides">
 				
 				{{ range .Pages }}
-						<section>
-							{{ .Content }}
-						</section>
+						{{ .Content }}
 				{{ end }}
 			
 			</div>
@@ -43,5 +41,6 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
+		
 	</body>
 </html>
