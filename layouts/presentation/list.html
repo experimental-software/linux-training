@@ -4,11 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Some presentation</title>
 
 		<link rel="stylesheet" href="{{ "reveal.js/dist/reset.css" | relURL }}">
 		<link rel="stylesheet" href="{{ "reveal.js/dist/reveal.css" | relURL }}">
 		<link rel="stylesheet" href="{{ "reveal.js/dist/theme/black.css" | relURL }}" id="theme">
+		
+		<script src="https://cdn.jsdelivr.net/npm/@gitgraph/js"></script>
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="{{ "reveal.js/plugin/highlight/monokai.css" | relURL }}" id="highlight-theme">
@@ -17,11 +19,12 @@
 		<div class="reveal">
 			<div class="slides">
 				
-        {{ range .Resources.Match "{*.md,*.html}" }}
-          <section>
-            {{ htmlUnescape .Content | safeHTML  }}
-          </section>
-        {{ end }}
+				{{ range .Pages }}
+						<section>
+							{{ .Content }}
+						</section>
+				{{ end }}
+			
 			</div>
 		</div>
 
