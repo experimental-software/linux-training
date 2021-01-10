@@ -1,4 +1,5 @@
 
+
 var toc = document.querySelector("#toc");
 var content = document.querySelector("#content");
 
@@ -43,3 +44,16 @@ function anchorLink(index) {
 </div>
   `
 }
+
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+  if (entry.intersectionRatio > 0) {
+    console.log('in the view');
+  } else {
+    console.log('out of view');
+  }
+});
+});
+
+const sectionHeadlines = document.querySelectorAll('h2');
+sectionHeadlines.forEach(section => observer.observe(section));

@@ -71,6 +71,10 @@
   margin-right: auto;
 }
 
+#content .card {
+  margin-bottom: 25px;
+}
+
 .anchorContainer {
   margin-bottom: 100px;
 }
