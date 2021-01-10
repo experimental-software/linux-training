@@ -30,8 +30,18 @@
                   {{ .Content }}
               </div>
             </div>
-        {{ end }}
 
+        {{ end }}
+        <div class="sectionStepper">
+          <div class="d-flex justify-content-between">
+            <div>
+              <button type="button" class="goToPreviousSection btn btn-secondary" onclick="goToPreviousSection()">Zurück</button>
+            </div>
+            <div>
+              <button type="button" class="goToNextSection btn btn-primary float-right" onclick="goToNextSection()">Weiter</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

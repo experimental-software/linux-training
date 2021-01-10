@@ -50,6 +50,8 @@ function anchorLink(index) {
 }
 
 function setActive(sectionCount) {
+  location.hash = "#section-" + sectionCount;
+  currentSection = sectionCount;
   var sectionLinks = document.querySelectorAll("#toc .card");
   for (i = 0; i < sectionLinks.length; i++) {
     var sectionLink = sectionLinks[i];
@@ -83,6 +85,21 @@ function setActive(sectionCount) {
     } else {
       anchorContainer.classList.remove("current");
     }
+  }
+}
+
+function goToPreviousSection() {
+  if (currentSection > 1) {
+    currentSection--;
+    setActive(currentSection);
+  }
+}
+
+function goToNextSection() {
+  var numberOfSections = document.querySelectorAll("#toc .card").length;
+  if (currentSection < numberOfSections) {
+    currentSection++;
+    setActive(currentSection);
   }
 }
 
