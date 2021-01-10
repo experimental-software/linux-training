@@ -7,7 +7,9 @@ var sections = document.querySelectorAll("#content .card");
 for (i = 0; i < sections.length; i++) {
   var sectionCount = i + 1;
   var section = sections[i];
-  var subject = section.querySelector("h2").innerText;
+  var sectionHeadline = section.querySelector("h2");
+  sectionHeadline.setAttribute('data-section', `section-${sectionCount}`);
+  var subject = sectionHeadline.innerText;
   
   var anchor = document.createElement("a");
   var anchorId = document.createAttribute("id");
@@ -45,14 +47,13 @@ function anchorLink(index) {
   `
 }
 
-observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-  if (entry.intersectionRatio > 0) {
-    console.log('in the view');
-  } else {
-    console.log('out of view');
-  }
-});
+var observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      var sectionHeadline = entry.target;
+      console.log(sectionHeadline.getAttribute('data-section'));
+    }
+  });
 });
 
 const sectionHeadlines = document.querySelectorAll('h2');
