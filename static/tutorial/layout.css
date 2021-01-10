@@ -32,9 +32,14 @@
  /* display: block; */
 }
 
-/* When you mouse over the navigation links, change their color */
-#toc a:hover {
- color: #f1f1f1;
+#toc .visited a {
+  color: black;
+}
+
+#toc .current {
+  color: black;
+  background-color: grey;
+  font-weight: bold;
 }
 
 #toc {
@@ -72,8 +77,10 @@
 }
 
 #content .card {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
+
+
 
 .anchorContainer {
   margin-bottom: 100px;
