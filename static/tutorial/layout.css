@@ -78,10 +78,11 @@
 
 #content .card {
   margin-bottom: 50px;
+  /* display: none; */
 }
 
-#content .card {
-  margin-bottom: 50px;
+#content .current {
+  display: block;
 }
 
 
