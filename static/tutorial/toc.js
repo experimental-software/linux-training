@@ -7,6 +7,7 @@ var sections = document.querySelectorAll("#content .card");
 for (i = 0; i < sections.length; i++) {
   var sectionCount = i + 1;
   var section = sections[i];
+  section.setAttribute('data-section', `${sectionCount}`);
   var sectionHeadline = section.querySelector("h2");
   sectionHeadline.setAttribute('data-section', `${sectionCount}`);
   var subject = sectionHeadline.innerText;
@@ -30,7 +31,7 @@ for (i = 0; i < sections.length; i++) {
 function sectionLink(subject, index) {
   return `
 <div class="card" data-section="${index}">
-  <a href="#section-${index}">
+  <a onclick="setActive(${index})">
     <div class="card-body">
       ${subject}
     </div>
@@ -42,7 +43,7 @@ function sectionLink(subject, index) {
 function anchorLink(index) {
   return `
 <div class="anchorContainer">
-  <a id="section-${index}">&nbsp;</a>
+  <a href="#" id="section-${index}">&nbsp;</a>
 </div>
   `
 }
@@ -54,24 +55,41 @@ function setActive(sectionCount) {
     if (i + 1 <= sectionCount) {
       sectionLink.classList.add("visited");
     } else {
-      sectionLink.classList.remove("visited");
+      if (sectionLink) {
+        sectionLink.classList.remove("visited");
+      }
+      
     }
     if (i + 1 === sectionCount) {
       sectionLink.classList.add("current");
     } else {
-      sectionLink.classList.remove("current");
+      if (sectionLink) {
+        sectionLink.classList.remove("current");
+      }
+    }
+  }
+  var sections = document.querySelectorAll("#content .card");
+  for (i = 0; i <= sections.length; i++) {
+    var section = sections[i];
+    if (i + 1 === sectionCount) {
+      section.classList.add("current");
+    } else {
+      if (section) {
+        section.classList.remove("current");
+      }
+      
     }
   }
 }
 
-var observer = new IntersectionObserver((entries, observer) => {
-    entries.reverse().forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-      var sectionHeadline = entry.target;
-      setActive(parseInt(sectionHeadline.getAttribute('data-section')))
-    }
-  });
-});
-
-const sectionHeadlines = document.querySelectorAll('h2');
-sectionHeadlines.forEach(section => observer.observe(section));
+// var observer = new IntersectionObserver((entries, observer) => {
+//     entries.reverse().forEach(entry => {
+//     if (entry.intersectionRatio > 0) {
+//       var sectionHeadline = entry.target;
+//       setActive(parseInt(sectionHeadline.getAttribute('data-section')))
+//     }
+//   });
+// });
+// 
+// const sectionHeadlines = document.querySelectorAll('h2');
+// sectionHeadlines.forEach(section => observer.observe(section));
