@@ -1,6 +1,15 @@
 <html>
 <body>
   <h1>Welcome!</h1>
-  {{ .Content}}
+  {{ .Content }}
+  
+
+  {{ range .Pages }}
+    <ul>
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    </ul>
+  {{ end }}
 </body>
 </html>
