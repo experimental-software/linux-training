@@ -1,7 +1,8 @@
 ---
+weigth: 1
 title: How to do scripting
 teaser: Learn how to write shell scripts.
-weigth: 1
+icon: fas fa-scroll
 ---
 
 <Scripting page>

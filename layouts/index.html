@@ -20,12 +20,21 @@
   
   <hr />
 
-  {{ range .Pages }}
-    <ul>
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Params.Teaser }}
-      </li>
-    </ul>
-  {{ end }}
+  <ul>
+    {{ range .Pages }}
+      {{ if eq .Kind "section" }}
+        <li>
+          <i class="{{ .Params.Icon }}"></i>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Params.Teaser }}
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  
+  <hr />
+  
+  <a href="./imprint">Imprint</a>
+  
+
 </body>
 </html>
