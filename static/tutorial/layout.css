@@ -78,7 +78,7 @@
 
 #content .card {
   margin-bottom: 50px;
-  /* display: none; */
+  display: none;
 }
 
 #content .current {
@@ -87,7 +87,12 @@
 
 
 .anchorContainer {
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+  display: none;
+}
+
+.anchorContainer.current {
+  display: block;
 }
 
 
