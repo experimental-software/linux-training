@@ -58,11 +58,14 @@
   position: fixed;
   top: 0;
   width: 100%;
-   z-index: 1; 
+  z-index: 0;
+  background: blue;
+  opacity: 1;
 }
 
 #titleWrapper {
   height: 200px;
+  color: blue;
 }
 
 /* Style page content */
