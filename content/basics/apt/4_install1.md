@@ -1,3 +1,6 @@
+---
+title: Nam eget ex 2
+---
 
 ## Nam eget ex
 

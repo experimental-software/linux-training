@@ -10,7 +10,17 @@
 <body>
   
   <div id="toc">
-    
+    {{ $sectionId := 0 }}
+    {{ range sort .Pages "File.Path" }}
+        {{ $sectionId = add $sectionId 1 }}
+        <div class="card" data-section-id="{{ $sectionId }}">
+          <a href="#section-{{ $sectionId }}" onclick="setActive({{ $sectionId }})">
+          <div class="card-body">
+            {{ .Title }}
+          </div>
+          </a>
+        </div>
+    {{ end }}
   </div>
   
   <div id="title" style="background: white; opacity: 1;">
@@ -24,13 +34,20 @@
     </div>
     <div class="col">
       <div id="content">
-        {{ range .Pages }}
-            <div class="card">
-              <div class="card-body">
-                  {{ .Content }}
-              </div>
+        {{ $sectionId := 0 }}
+        {{ range sort .Pages "File.Path" }}
+            {{ $sectionId = add $sectionId 1 }}
+            <div class="anchorContainer">
+              <a id="section-{{ $sectionId }}">&nbsp;</a>
             </div>
-
+            <div data-section-id="{{ $sectionId }}">
+              <div class="card">
+                <h5 class="card-title">{{ .Title }}</h5>
+                <div class="card-body">
+                    {{ .Content }}
+                </div>
+              </div>              
+            </div>
         {{ end }}
         <div class="sectionStepper">
           <div class="d-flex justify-content-between">

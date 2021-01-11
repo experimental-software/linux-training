@@ -1,3 +1,7 @@
+---
+title: A Installation 2
+---
+
 
 ## Installation
 

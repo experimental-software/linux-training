@@ -1,3 +1,6 @@
+---
+title: Etiam sit amet 2
+---
 
 ## Etiam sit amet
 
