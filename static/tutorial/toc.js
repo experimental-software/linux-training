@@ -1,14 +1,9 @@
 
-
-
-var toc = document.querySelector("#toc");
-var content = document.querySelector("#content");
-
-
+// TODO: Rename to "setActiveSection"
 function setActive(sectionCount) {
   location.hash = "#section-" + sectionCount;
   currentSection = sectionCount;
-  var sectionLinks = document.querySelectorAll("#toc .card");
+  var sectionLinks = document.querySelectorAll("#toc div.sectionLink");
   for (i = 0; i < sectionLinks.length; i++) {
     var sectionLink = sectionLinks[i];
     if (i + 1 <= sectionCount) {
@@ -19,27 +14,16 @@ function setActive(sectionCount) {
     if (i + 1 === sectionCount) {
       sectionLink.classList.add("current");
     } else {
-      if (sectionLink) {
-        sectionLink.classList.remove("current");
-      }
+      sectionLink.classList.remove("current");
     }
   }
-  var sections = document.querySelectorAll("#content .card");
+  var sections = document.querySelectorAll("#content div.section");
   for (i = 0; i < sections.length; i++) {
     var section = sections[i];
     if (i + 1 === sectionCount) {
       section.classList.add("current");
     } else {
       section.classList.remove("current");
-    }
-  }
-  var anchorContainers = document.querySelectorAll(".anchorContainer");
-  for (i = 0; i < anchorContainers.length; i++) {
-    var anchorContainer = anchorContainers[i];
-    if (i + 1 === sectionCount) {
-      anchorContainer.classList.add("current");
-    } else {
-      anchorContainer.classList.remove("current");
     }
   }
 }
@@ -52,7 +36,7 @@ function goToPreviousSection() {
 }
 
 function goToNextSection() {
-  var numberOfSections = document.querySelectorAll("#toc .card").length;
+  var numberOfSections = document.querySelectorAll("#toc div.sectionLink").length;
   if (currentSection < numberOfSections) {
     currentSection++;
     setActive(currentSection);

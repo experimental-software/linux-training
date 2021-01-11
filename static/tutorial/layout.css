@@ -78,21 +78,18 @@
 
 #content .card {
   margin-bottom: 50px;
-  display: none;
 }
 
-#content .current {
+#content div.section {
+  /* display: none; */
+}
+
+#content div.section.current {
   display: block;
 }
-
 
 .anchorContainer {
   margin-bottom: 70px;
-  display: none;
-}
-
-.anchorContainer.current {
-  display: block;
 }
 
 
