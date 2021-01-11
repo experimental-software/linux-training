@@ -1,6 +1,5 @@
 
-// TODO: Rename to "setActiveSection"
-function setActive(sectionCount) {
+function setActiveSection(sectionCount) {
   location.hash = "#section-" + sectionCount;
   currentSection = sectionCount;
   var sectionLinks = document.querySelectorAll("#toc div.sectionLink");
@@ -31,7 +30,7 @@ function setActive(sectionCount) {
 function goToPreviousSection() {
   if (currentSection > 1) {
     currentSection--;
-    setActive(currentSection);
+    setActiveSection(currentSection);
   }
 }
 
@@ -39,10 +38,10 @@ function goToNextSection() {
   var numberOfSections = document.querySelectorAll("#toc div.sectionLink").length;
   if (currentSection < numberOfSections) {
     currentSection++;
-    setActive(currentSection);
+    setActiveSection(currentSection);
   }
 }
 
 var currentSection = 1;
 
-setActive(currentSection);
+setActiveSection(currentSection);
