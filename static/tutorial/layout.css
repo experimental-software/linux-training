@@ -81,7 +81,7 @@
 }
 
 #content div.section {
-  /* display: none; */
+  display: none;
 }
 
 #content div.section.current {
