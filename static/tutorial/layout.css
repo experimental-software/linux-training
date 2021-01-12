@@ -67,6 +67,15 @@
   border-bottom-style: solid;
   border-color: grey;
   border-width: 1px;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15pt;
+}
+
+#title a {
+  padding-right: 20px;
+  color: black;
 }
 
 /* Style page content */
