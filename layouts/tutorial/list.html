@@ -9,21 +9,7 @@
 </head>
 
 <body>
-  
-  <div id="toc">
-    {{ $sectionId := 0 }}
-    {{ range sort .Pages "File.Path" }}
-        {{ $sectionId = add $sectionId 1 }}
-        <div class="sectionLink card" data-section-id="{{ $sectionId }}">
-          <a href="#section-{{ $sectionId }}" onclick="setActiveSection({{ $sectionId }})">
-            <div class="card-body">
-              {{ .Title }}
-            </div>
-          </a>
-        </div>
-    {{ end }}
-  </div>
-  
+    
   <div id="title" style="background: white; opacity: 1;">
     <a href="{{ .Parent.RelPermalink }}"><i class="fas fa-times"></i></a>
     <span>{{ .Title }}</span>
@@ -44,7 +30,7 @@
               </div>
               <div data-section-id="{{ $sectionId }}">
                 <div class="card">
-                  <h5 class="card-title">{{ .Title }}</h5>
+                  <h1 class="card-title">{{ .Title }}</h1>
                   <div class="card-body">
                       {{ .Content }}
                   </div>
@@ -65,6 +51,20 @@
       </div>
     </div>
 
+  </div>
+  
+  <div id="toc">
+    {{ $sectionId := 0 }}
+    {{ range sort .Pages "File.Path" }}
+        {{ $sectionId = add $sectionId 1 }}
+        <div class="sectionLink card" data-section-id="{{ $sectionId }}">
+          <a href="#section-{{ $sectionId }}" onclick="setActiveSection({{ $sectionId }})">
+            <div class="card-body">
+              {{ .Title }}
+            </div>
+          </a>
+        </div>
+    {{ end }}
   </div>
 
   <script src="{{ "tutorial/toc.js" | relURL }}" type="application/javascript"></script>

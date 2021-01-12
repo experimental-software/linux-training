@@ -1,8 +1,6 @@
 ---
-title: Etiam sit amet 2
+title: Etiam sit amet
 ---
-
-## Etiam sit amet
 
 Etiam sit amet tincidunt dolor. Mauris ante arcu, finibus tempus turpis quis, varius bibendum enim. Maecenas nisl metus, ultrices in gravida vitae, lacinia eu est. Nullam hendrerit ligula ante. Integer tempor lacus ex, eget aliquam urna finibus ac. Nam non neque eu lorem consectetur molestie. Maecenas dignissim neque elementum, consectetur eros non, aliquet nulla. Donec vel dignissim magna. Nullam commodo sed sapien eget accumsan. Nullam posuere sapien sit amet sapien suscipit, non faucibus sem faucibus. Nulla sit amet felis eu mauris gravida scelerisque et quis urna. Aliquam erat volutpat. Nunc in congue lectus. Suspendisse potenti. Donec vitae dictum elit. Phasellus at ante mattis, porttitor nisl vulputate, pretium augue.
 

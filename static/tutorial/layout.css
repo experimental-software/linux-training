@@ -85,8 +85,8 @@
   margin-right: auto;
 }
 
-#content .card {
-  margin-bottom: 50px;
+#content .card-title {
+  padding: 15px;
 }
 
 #content div.section {
@@ -99,6 +99,11 @@
 
 .anchorContainer {
   margin-bottom: 70px;
+}
+
+.sectionStepper {
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
 
 
