@@ -1,5 +1,8 @@
 baseURL = "http://example.org/linux-training"
 languageCode = "en-gb"
-title = "Linux Training"
+title = "Linux Workshop"
 theme = "workshop-materials"
+
+[params]
+  subject = "Linux"
 

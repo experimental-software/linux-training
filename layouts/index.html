@@ -17,11 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
-    <!-- Global CSS -->
-    <!-- <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css"> -->
-    <!-- Plugins CSS -->
-    <!-- <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css"> -->
-    <!-- Theme CSS -->
+    <!-- Prettydocs -->
     <link id="theme-style" rel="stylesheet" href="{{ "prettydocs/layout.css" | relURL }}">
 
 </head>
@@ -38,7 +34,7 @@
                 <div class="branding">
                     <h1 class="logo">
                         <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                        <span class="text-highlight">Raspberry Pi</span><span class="text-bold"> Tutorials</span>
+                        <span class="text-highlight">{{ .Site.Params.Subject }}</span><span class="text-bold"> Workshop</span>
                     </h1>
                 </div><!--//branding-->
                 <div class="tagline">
@@ -49,10 +45,9 @@
 
                <div>
                  <a class="btn btn-primary btn-xl js-scroll-trigger"
-                   href="https://www.youtube.com/embed/sajBySPeYH0"
-                   onclick="return !window.open(this.href, 'Google', 'width=800,height=500')"
+                   href="{{ .Params.PrimaryLinkHref }}"
                    target="_blank">
-                     <i class="fas fa-play-circle"></i> Introductory video
+                     <i class="{{ .Params.PrimaryLinkIcon }}"></i> {{ .Params.PrimaryLinkText }}
                  </a>
                </div>
             </div><!--//container-->
@@ -60,7 +55,6 @@
 
         <section class="cards-section text-center">
             <div class="container">
-                <h2 class="title">{{ .Site.Title }}</h2>
                 <div class="intro">
                     <p>{{ .Content }}</p>
                 </div><!--//intro-->

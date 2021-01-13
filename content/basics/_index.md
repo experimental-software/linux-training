@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: The very basics.
+title: Basics
 teaser: Get started with Linux.
 icon: fas fa-arrow-right
 ---
