@@ -60,6 +60,7 @@
         <div class="sectionLink card" data-section-id="{{ $sectionId }}">
           <a href="#section-{{ $sectionId }}" onclick="setActiveSection({{ $sectionId }})">
             <div class="card-body">
+              <span class="dot">{{ $sectionId }}</span>
               {{ .Title }}
             </div>
           </a>
