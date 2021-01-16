@@ -1,5 +1,6 @@
-
-## Installation
+---
+title: Installation
+---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu consequat nunc. Morbi pharetra pulvinar eros, id sagittis turpis volutpat at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Curabitur vulputate eros sed hendrerit accumsan. Vestibulum elementum tellus pulvinar massa consequat, quis mattis odio ornare. Donec ac sem ut turpis dapibus laoreet ac sed leo. Sed sed lectus vel risus pharetra molestie. Etiam ac eros sed urna dapibus consectetur. Quisque ultricies, massa at aliquam accumsan, ante mi vehicula nisi, et cursus sem odio ac massa. Vivamus eget dolor bibendum, elementum quam venenatis, dictum magna.
 
