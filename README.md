@@ -1,39 +1,56 @@
-# Linux Training
+# Linux Workshop
 
-## Dependencies
+## Development
 
-The following tools need to be installed on your machine to contribute to this repository:
+### Run Hugo server
 
-- Hugo
-- Git
-- Some text editor (e.g. VS Code, Atom, Notepad++)
+To a development server which always re-renders after every change, run the following command:
 
-## Content editing
+```
+hugo server
+```
 
-### Tutorials
+### Build website
 
-See https://daringfireball.net/projects/markdown/syntax
+To generate the HTML for publication, run the following command:
 
-### Presentations
+```
+hugo --destination docs/
+```
 
-See https://revealjs.com/
+### Update theme
+
+```
+git submodule update --remote 
+```
+
+## Content authoring
+
+### Presentation
+
+Run the following command to create a new presentation in Hugo's `content` directory:
+
+```
+hugo new --kind presentation subject-two/my-presentation
+```
+
+### Tutorial
+
+Run the following command to create a new presentation in Hugo's `content` directory:
+
+```
+hugo new --kind tutorial2 subject-two/my-tutorial
+```
+
+Note: The "tutorial2" archetype needs the suffix "2" to distinguish it from the build-in "tutorial" archetype.
 
 ## Credits
 
-### Theme
+- The layout of the start page and the subject list pages is applied from a Bootstrap template by [Xiaoying Riley](https://themes.3rdwavemedia.com/) which is licensed under Creative Commons Attribution 3.0 License.
+- The layout of the tutorial pages is inspired by [Google Codelabs](https://github.com/googlecodelabs/tools).
+- The presentations are based on [RevealJS](https://revealjs.com/) which is licensed under the [MIT license](https://github.com/hakimel/reveal.js/blob/master/LICENSE).
+- At various places of the website [Font Awesome](https://fontawesome.com/) icons are used.
 
-https://themes.3rdwavemedia.com/bootstrap-templates/product/prettydocs-free-bootstrap-theme-for-developers-and-startups/
+## License
 
-### Codelabs
-
-The layout of the tutorials is inspired by Google Codelabs.
-
-
-### Others
-
-- https://fontawesome.com/icons?d=gallery&q=re&m=free
-
-
-## References
-
-- https://themes.3rdwavemedia.com/bootstrap-templates/product/prettydocs-free-bootstrap-theme-for-developers-and-startups/
+[Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
