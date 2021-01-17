@@ -39,10 +39,8 @@ hugo new --kind presentation subject-two/my-presentation
 Run the following command to create a new presentation in Hugo's `content` directory:
 
 ```
-hugo new --kind tutorial2 subject-two/my-tutorial
+hugo new --kind tutorial subject-two/my-tutorial
 ```
-
-Note: The "tutorial2" archetype needs the suffix "2" to distinguish it from the build-in "tutorial" archetype.
 
 ## Credits
 
