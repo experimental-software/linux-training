@@ -1,9 +1,8 @@
-baseURL = "http://example.org/linux-training"
+baseURL = "http://example.org/linux-workshop"
 languageCode = "en-gb"
 title = "Linux Workshop"
 theme = "workshop-materials"
 
 [params]
   subject = "Linux"
-  feedbackLink = "https://github.com/experimental-software/linux-training/issues/new"
-
+  feedbackLink = "https://github.com/experimental-software/linux-workshop/issues/new"
