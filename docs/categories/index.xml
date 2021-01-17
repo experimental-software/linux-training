@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Linux Workshop</title>
-    <link>http://example.org/linux-workshop/categories/</link>
+    <link>https://experimental-software.github.io/linux-workshop/categories/</link>
     <description>Recent content in Categories on Linux Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     
-	<atom:link href="http://example.org/linux-workshop/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://experimental-software.github.io/linux-workshop/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

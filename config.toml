@@ -1,4 +1,4 @@
-baseURL = "http://example.org/linux-workshop"
+baseURL = "https://experimental-software.github.io/linux-workshop"
 languageCode = "en-gb"
 title = "Linux Workshop"
 theme = "workshop-materials"
