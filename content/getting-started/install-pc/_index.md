@@ -1,5 +1,5 @@
 ---
 title: Install Ubuntu on a VM
 type: tutorial
-weigth: 5
+weight: 5
 ---

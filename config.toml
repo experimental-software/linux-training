@@ -5,4 +5,5 @@ theme = "workshop-materials"
 
 [params]
   subject = "Linux"
+  feedbackLink = "https://github.com/experimental-software/linux-training/issues/new"
 
