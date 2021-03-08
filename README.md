@@ -2,6 +2,12 @@
 
 ## Development
 
+### Download the repository
+
+```
+git clone --recursive https://github.com/experimental-software/linux-workshop.git
+```
+
 ### Run Hugo server
 
 To a development server which always re-renders after every change, run the following command:
