@@ -10,7 +10,7 @@ git clone --recursive https://github.com/experimental-software/linux-workshop.gi
 
 ### Run Hugo server
 
-To a development server which always re-renders after every change, run the following command:
+To start a development server which always re-renders after every change, run the following command:
 
 ```
 hugo server
